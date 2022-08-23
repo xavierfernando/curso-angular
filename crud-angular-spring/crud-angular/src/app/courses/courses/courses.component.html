@@ -7,6 +7,11 @@
       <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
 
+      <ng-container matColumnDef="_id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let course"> {{ course._id }} </td>
+      </ng-container>
+
       <!-- Name Column -->
       <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef> Curso </th>
@@ -17,7 +22,7 @@
       <ng-container matColumnDef="category">
         <th mat-header-cell *matHeaderCellDef> Categoria </th>
         <td mat-cell *matCellDef="let course"> {{course.category}}
-          <mat-icon aria-hidden="false" aria-label="Categoria do Curso">{{ course.category | category  }}</mat-icon>
+          <mat-icon aria-hidden="false" aria-label="Categoria do Curso">{{ course.category | category }}</mat-icon>
         </td>
       </ng-container>
 
